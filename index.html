@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>!UNO!</h1>
+<p>#include stdio.h</p>
+<p>#include stdbool.h</p>
+<p>int STACK[5];</p>
+<p>int TOP=-1;</p>
+<p>void push(){</p>
+<p>    if (TOP==4)</p>
+<p>        printf("Stack Overflow\n");</p>
+<p>    else{</p>
+<p>        int n;</p>
+<p>        printf("Enter a no. : ");</p>
+<p>        scanf("%d",&n);</p>
+<p>        TOP++;</p>
+<p>        STACK[TOP]=n;</p>
+<p>    }</p>
+<p>}</p>
+<p>                                                 </p>
+<p>void pop(){</p>
+<p>    if (TOP==-1)</p>
+<p>        printf("Stack Underflow\n");</p>
+<p>    else{</p>
+<p>        int temp=STACK[TOP];</p>
+<p>        printf("The popped element is : %d\n",temp);</p>
+<p>        TOP--;</p>
+<p>    }</p>
+<p>}</p>
+<p>                                                        </p>
+<p>void peek(){</p>
+<p>    printf("%d\n",STACK[TOP]);</p>
+<p>}</p>
+<p></p>
+<p>void display(){</p>
+<p>    int i;</p>
+<p>    for (i=TOP;i>=0;i--)</p>
+<p>        printf("%d\n",STACK[i]);</p>
+<p>}</p>
+<p>                                                 </p>
+<p>int main(){</p>
+<p>    while(true){</p>
+<p>    printf("Press 1 to push an element in the stack\n");</p>
+<p>    printf("Press 2 to pop an element from the stack\n");</p>
+<p>    printf("Press 3 to peek an element from the stack\n");</p>
+<p>    printf("Press 4 to display the elements of the stack\n");</p>
+<p>    printf("Press 5 to exit\n");</p>
+<p>    printf("Enter your choice: </p>
+<p>    int n;</p>
+<p>    scanf("%d",&n);</p>
+<p>    switch(n){</p>
+<p>        case 1:push(); break;</p>
+<p>        case 2:pop(); break;</p>
+<p>        case 3:peek(); break;</p>
+<p>        case 4:display(); break;</p>
+<p>        case 5: return;</p>
+<p>        default:printf("Invalid Choice\n");</p>
+<p>    }</p>
+<p>    }</p>
+<p>return 0;</p>
+<p>}</p>
+
+</body>
+</html>
